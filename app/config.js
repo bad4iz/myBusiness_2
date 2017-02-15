@@ -30,9 +30,12 @@ requirejs.config({
   packages: [
     'screens/index',
     'screens/contacts',
+    'screens/other',
 
     'modules/menu',
-    'modules/images'
+    'modules/images',
+    'modules/contents',
+    'modules/contacts'
   ]
 });
 

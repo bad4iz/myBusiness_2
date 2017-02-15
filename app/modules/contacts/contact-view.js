@@ -2,29 +2,22 @@ define(function(require) {
   'use strict';
 
   var Backbone = require('backbone'),
-      template = require('text!./templates/book.html'),
-      detailsTemplate = require('text!./templates/book-details.html'),
+      template = require('text!./templates/contact.html'),
       $ = require('jquery'),
       _ = require('underscore');
 
   return Backbone.View.extend({
-    className: 'row book-item',
+    className: '',
 
     initialize: function(options) {
-      options = options || {};
-      if (options.isDetails) {
-        this.template = _.template(detailsTemplate);
-      } else {
         this.template = _.template(template);
-      }
-
       if (options.container) {
         this.container = options.container;
       }
     },
 
     render: function() {
-      this.$el.html(this.model.toJSON());
+      this.$el.html(this.template({model: this.model.toJSON()}));
       if (this.container) {
         this.container.html(this.$el);
       }
@@ -32,7 +25,7 @@ define(function(require) {
     },
 
     remove: function() {
-      console.log('remove book details');
+      console.log('remove contact details');
       Backbone.View.prototype.remove.apply(this);
     }
   });

@@ -4,12 +4,11 @@ define(function(require) {
   var Controller = require('controller'),
       View = require('./view'),
       $ = require('jquery'),
-      // Mem = require('mem'),
 
       // // Modules used in this screen
       ImagesModule = require('modules/images'),
       MenuModule = require('modules/menu'),
-      // CommentsModule = require('modules/comments'),
+      ContentsModule = require('modules/contents'),
 
   IndexScreenController = Controller.extend({
     routes: {
@@ -23,19 +22,20 @@ define(function(require) {
 
         // Init menu
         this.menuModule = new MenuModule();
-        this.menuModule.showMenu(this.container.getMenuContainer(), 'authors');
+        this.menuModule.showMenu(this.container.getMenuContainer(), 'index');
 
         // Image
         this.imagesModule = new ImagesModule();
         this.imagesModule.showList(this.container.getImageContainer());
-        var r = this.container.getImageContainer();
 
-        //Init comments
-        // this.textsModule = Mem.set('comments', getTextConteiner);
+        //Init getContentConteiner
+        this.contentsModule = new ContentsModule();
+        this.contentsModule.showList(this.container.getContentConteiner());
+
     },
 
     onAfterRoute: function() {
-      console.log(this.conteiner + ' после выполнения контроллера Index ');
+      console.log(' после выполнения контроллера Index ');
     },
 
     index: function() {

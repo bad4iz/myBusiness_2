@@ -2,12 +2,12 @@ define(function(require) {
     'use strict';
 
     var Backbone = require('backbone'),
-        template = require('text!./templates/image.html'),
+        template = require('text!./templates/content.html'),
         $ = require('jquery'),
         _ = require('underscore');
 
     return Backbone.View.extend({
-        className: 'image-item',
+        className: 'content-item',
 
         initialize: function(options) {
             this.template = _.template(template);
@@ -27,7 +27,7 @@ define(function(require) {
         },
 
         remove: function() {
-            console.log('remove image details');
+            console.log('remove content details');
             Backbone.View.prototype.remove.apply(this);
         }
     });

@@ -9,10 +9,10 @@ define(function(require) {
   return Backbone.View.extend({
     template: _.template(template),
 
-      id: 'sdsfs',
+      id: '',
 
       initialize: function(options) {
-          console.log('new books container view');
+          console.log('new index container view');
           this.container = options.container;
           this.render();
       },
@@ -27,11 +27,11 @@ define(function(require) {
     },
 
     getImageContainer: function() {
-      return this.$('.books-list');
+      return this.$('.image');
     },
 
-    getTextConteiner: function () {
-          return this.$('.text');
+    getContentConteiner: function () {
+          return this.$('.contents');
     }
   });
 });

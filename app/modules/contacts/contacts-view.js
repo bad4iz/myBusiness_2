@@ -2,8 +2,8 @@ define(function(require) {
   'use strict';
 
   var Backbone = require('backbone'),
-      template = require('text!./templates/books.html'),
-      BookView = require('./book-view'),
+      template = require('text!./templates/contacts.html'),
+      ContactView = require('./contact-view'),
       $ = require('jquery'),
       _ = require('underscore');
 
@@ -11,23 +11,25 @@ define(function(require) {
     template: _.template(template),
 
     initialize: function(options) {
-      this.container = options.container;
+        console.log('инициализация contacts-view.js');
+        this.container = options.container;
+        this.collection.on('add', this.addOne, this);
     },
 
     render: function() {
-      this.$el.html(this.template());
+        this.collection.each(this.addOne, this);
 
-      var cache = $('<div />');
-      this.collection.each(function(model) {
-        var bookView = new BookView({model: model});
-        cache.append(bookView.render().$el);
-      });
+        this.container.html(this.$el);
+        return this;
+    },
 
-      this.$('.books-collection-view').html(cache);
+      addOne: function (model) {
+          console.log('инициализация contacts-view.js');
 
-      this.container.html(this.$el);
-
-      return this;
-    }
+          //создавать новый дочерний вид
+          var contactView = new ContactView({model: model});
+          // добавлять его в корневой элемент
+          this.$el.append(contactView.render().el);
+      }
   });
 });

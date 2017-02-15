@@ -9,7 +9,7 @@ define(function(require) {
         template: _.template(template),
 
         initialize: function(options) {
-            console.log('new books container view');
+            console.log('new contacts container view');
             this.container = options.container;
             this.render();
         },
@@ -23,12 +23,12 @@ define(function(require) {
             return this.$('.menu');
         },
 
-        getImageContainer: function() {
-            return this.$('.books-list');
+        getContactsContainer: function() {
+            return this.$('.contacts');
         },
 
-        getTextConteiner: function () {
-            return this.$('.text');
+        getContentsConteiner: function () {
+            return this.$('.contents');
         }
     });
 });

@@ -2,18 +2,14 @@ define(function (require) {
     'use strict';
 
     var Controller = require('controller'),
-        // Mem = require('mem'),
         ImagesView = require('./images-view'),
         Collection = require('./collection'),
         _ = require('underscore'),
         slick = require('slick');
 
-    // Controller provides Public API for books module
+    // Controller provides Public API for image module
     return Controller.extend({
-        initialize: function () {
-
-            console.log('инициализиция Image widget');
-        },
+        initialize: function () {},
 
         showList: function (container) {
             console.log('showList: function' + container);

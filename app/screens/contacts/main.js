@@ -4,17 +4,16 @@ define(function(require) {
   var Controller = require('controller'),
       View = require('./view'),
       $ = require('jquery'),
-      MenuModule = require('modules/menu'),
-      // Mem = require('mem'),
 
       // Modules used in this screen
-      // ContactsModule = require('modules/contacts'),
+      ContactsModule = require('modules/contacts'),
+      ContentsModule = require('modules/contents'),
+      MenuModule = require('modules/menu'),
 
 
   ContactsScreenController = Controller.extend({
     routes: {
-      'contacts': 'showContacts',
-      'contacts/:name': 'showContactDetails'
+      'contacts': 'showContacts'
     },
 
     onBeforeRoute: function() {
@@ -27,7 +26,15 @@ define(function(require) {
         //
         // // Init menu
         this.menuModule = new MenuModule('menu');
-        this.menuModule.showMenu(this.container.getMenuContainer(), 'authors');
+        this.menuModule.showMenu(this.container.getMenuContainer(), 'contacts');
+
+        // Contact
+        this.contactsModule = new ContactsModule();
+        this.contactsModule.showList(this.container.getContactsContainer());
+
+        // ContentsModule
+        this.contentsModule = new ContentsModule();
+        this.contentsModule.showList(this.container.getContentsConteiner());
 
     },
 
