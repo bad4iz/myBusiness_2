@@ -10,10 +10,11 @@ define(function(require) {
     initialize: function() {
     },
 
-    showMenu: function(container, active) {
+    showMenu: function(container, active, other) {
       this.view = new View ({
         container: container,
-        active: active
+        active: active,
+        other: other
       });
     }    
   });

@@ -3,6 +3,7 @@ define(function (require) {
 
     var Backbone = require('backbone'),
         template = require('text!./templates/menu.html'),
+        otherTemplate = require('text!./templates/otherTemplate.html'),
         _ = require('underscore');
 
     return Backbone.View.extend({

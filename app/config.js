@@ -39,6 +39,6 @@ requirejs.config({
   ]
 });
 
-requirejs(['screens/index', 'screens/contacts'], function() {
+requirejs(['screens/index', 'screens/contacts', 'screens/other'], function() {
   Backbone.history.start();
 });
