@@ -2,8 +2,7 @@ define(function(require) {
   'use strict';
 
   var Controller = require('controller'),
-      // Mem = require('mem'),
-      View = require('./view');
+    View = require('./view');
 
   // Controller provides Public API for menu module
   return Controller.extend({
