@@ -1,19 +1,22 @@
 define(function(require) {
-  'use strict';
-
+  "use strict";
+  
   var Controller = require('controller'),
-    View = require('./view');
-
+     View = require('./view');
+  
   // Controller provides Public API for menu module
   return Controller.extend({
-    initialize: function() {
-    },
-
-    showMenu: function(container, active, other) {
-      this.view = new View ({
+    /**
+     *
+     * @param container
+     * @param active указывеет активный пункт меню
+     * @param back показывает кнопку назад
+     */
+    showMenu: function(container, active, back) {
+      this.view = new View({
         container: container,
         active: active,
-        other: other
+        back: back
       });
     }
   });
