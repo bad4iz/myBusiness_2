@@ -26,8 +26,7 @@ define(function (require) {
             this.$el.html(this.template({active: this.active}));
             this.container.html(this.$el);
             return this;
-        }
-        ,
+        },
 
         getMenuContainer: function () {
             return this.$('.menu');

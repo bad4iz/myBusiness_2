@@ -7,7 +7,7 @@ define(function(require) {
       _ = require('underscore');
 
   return Backbone.View.extend({
-    className: '',
+      tagName: 'li',
 
     initialize: function(options) {
         this.template = _.template(template);

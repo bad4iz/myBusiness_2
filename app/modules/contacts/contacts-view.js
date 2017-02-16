@@ -9,6 +9,7 @@ define(function(require) {
 
   return Backbone.View.extend({
     template: _.template(template),
+      tagName: 'ul',
 
     initialize: function(options) {
         console.log('инициализация contacts-view.js');
