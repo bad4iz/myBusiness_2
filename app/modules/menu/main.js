@@ -15,6 +15,6 @@ define(function(require) {
         active: active,
         other: other
       });
-    }    
+    }
   });
 });

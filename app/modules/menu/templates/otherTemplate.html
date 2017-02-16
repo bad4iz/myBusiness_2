@@ -1,7 +1,7 @@
-<nav>
+<nav class="back <% if (active !== 'index') { %> bottom <%} else { %> top <%}%>">
   <ul class="nav">
-    <li class=" back <% if (active === 'other') { %> active <%}%> ">
-      <a href="javascript:history.back();">Назад</a>
+    <li class="<% if (active === 'other') { %> active <%}%> ">
+      <a href="#">Назад</a>
     </li>
   </ul>
 </nav>

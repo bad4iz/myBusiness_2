@@ -35,10 +35,13 @@ requirejs.config({
     'modules/menu',
     'modules/images',
     'modules/contents',
-    'modules/contacts'
+    'modules/contacts',
+    'modules/router'
   ]
 });
 
 requirejs(['screens/index', 'screens/contacts', 'screens/other'], function() {
+
   Backbone.history.start();
+
 });

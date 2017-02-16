@@ -9,7 +9,6 @@ define(function(require) {
 
   return Backbone.View.extend({
     template: _.template(template),
-      tagName: 'ul',
 
     initialize: function(options) {
         console.log('инициализация contacts-view.js');
@@ -25,12 +24,26 @@ define(function(require) {
     },
 
       addOne: function (model) {
-          console.log('инициализация contacts-view.js');
+        this.$el.html(this.template());
 
-          //создавать новый дочерний вид
-          var contactView = new ContactView({model: model});
-          // добавлять его в корневой элемент
-          this.$el.append(contactView.render().el);
+        var cache = $('<ul />');
+        this.collection.each(function (model) {
+            var contactView = new ContactView({model: model});
+            cache.append(contactView.render().$el);
+        });
+
+        this.$('.contacts-list').html(cache);
+
+        this.container.html(this.$el);
+
+        return this;
+          //
+          // console.log('инициализация contacts-view.js');
+          //
+          // //создавать новый дочерний вид
+          // var contactView = new ContactView({model: model});
+          // // добавлять его в корневой элемент
+          // this.$el.append(contactView.render().el);
       }
   });
 });

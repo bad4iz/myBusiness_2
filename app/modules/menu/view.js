@@ -19,8 +19,11 @@ define(function (require) {
             }
 
             this.render();
-        }
-        ,
+        },
+
+        events: {
+            'click .back': 'back'
+        },
 
         render: function () {
             this.$el.html(this.template({active: this.active}));
@@ -30,6 +33,10 @@ define(function (require) {
 
         getMenuContainer: function () {
             return this.$('.menu');
+        },
+        back: function () {
+            Backbone.history.history.back();
         }
     });
+
 });
