@@ -22,7 +22,7 @@ define(function(require) {
       return this;
     },
     
-    addOne: function(model) {
+    addOne: function() {
       this.$el.html(this.template());
       var cache = $('<ul />');
       
