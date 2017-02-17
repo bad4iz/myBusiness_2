@@ -34,6 +34,13 @@ define(function(require) {
        
        other: function() {
          console.info('показ третьей страницы');
+       },
+       remove: function() {
+         this.menuModule.remove();
+         this.contentsModule.remove();
+         this.container.remove();
+         console.info('удаление модулей третьей страницы');
+  
        }
      });
   

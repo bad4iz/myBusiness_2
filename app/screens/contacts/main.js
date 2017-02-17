@@ -41,6 +41,13 @@ define(function(require) {
        
        showContacts: function() {
          console.info('показ страницы контактов');
+       },
+       remove: function() {
+         this.menuModule.remove();
+         this.contactsModule.remove();
+         this.contentsModule.remove();
+         this.container.remove();
+         console.info('удаление модулей страницы контактов');
        }
      });
   
