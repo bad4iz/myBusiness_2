@@ -42,10 +42,10 @@ define(function(require) {
          console.info('показ главной страницы');
        },
        remove: function() {
-         this.menuModule.remove();
-         this.imagesModule.remove();
-         this.contentsModule.remove();
-         this.container.remove();
+//          this.menuModule.remove();
+//          this.imagesModule.remove();
+//          this.contentsModule.remove();
+//          this.container.remove();
          console.info('удаление модулей главной страницы');
        }
      });
