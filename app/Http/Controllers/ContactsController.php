@@ -14,7 +14,7 @@ class ContactsController extends Controller
     public function index()
     {
         //времменая заглушка
-        $contacts = [['name' => 'Петя', 'age' => '23', 'occupation' => 'Директор'],
+        $covntacts = [['name' => 'Петя', 'age' => '23', 'occupation' => 'Директор'],
             ['name' => 'Вася', 'age' => '14', 'occupation' => 'Студент'],
             ['name' => 'Федя', 'age' => '60', 'occupation' => 'Охраник'],
             ['name' => 'Измаил', 'age' => '20', 'occupation' => 'Программист'],

@@ -13,7 +13,8 @@ define(function(require) {
      
      ContactsScreenController = Controller.extend({
        routes: {
-         'contacts': 'showContacts'
+         'contacts': 'showContacts',
+           'contacts/:id': 'showContactsId'
        },
        
        onBeforeRoute: function() {
@@ -43,10 +44,10 @@ define(function(require) {
          console.info('показ страницы контактов');
        },
        remove: function() {
-         // this.menuModule.remove();
-         // this.contactsModule.remove();
-         // this.contentsModule.remove();
-         // this.container.remove();
+         this.menuModule.remove();
+         this.contactsModule.remove();
+         this.contentsModule.remove();
+         this.container.remove();
          console.info('удаление модулей страницы контактов');
        }
      });
