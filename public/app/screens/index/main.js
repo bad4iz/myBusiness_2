@@ -46,6 +46,7 @@ define(function(require) {
          // this.imagesModule.remove();
          // this.contentsModule.remove();
          // this.container.remove();
+
          console.info('удаление модулей главной страницы');
        }
      });
