@@ -13,11 +13,15 @@ class ContactsController extends Controller
      */
     public function index()
     {
-        //
-        $contacts = [['name' => 'Dima', 'age'=> '23', 'occupation'=> 'web developer']
+        //времменая заглушка
+        $contacts = [['name' => 'Петя', 'age' => '23', 'occupation' => 'Директор'],
+            ['name' => 'Вася', 'age' => '14', 'occupation' => 'Студент'],
+            ['name' => 'Федя', 'age' => '60', 'occupation' => 'Охраник'],
+            ['name' => 'Измаил', 'age' => '20', 'occupation' => 'Программист'],
+            ['name' => 'Олеся', 'age' => '18', 'occupation' => 'Бухгалтер'],
         ];
 
-    echo json_encode($contacts);
+        echo json_encode($contacts);
     }
 
     /**
@@ -33,7 +37,7 @@ class ContactsController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -44,7 +48,7 @@ class ContactsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -55,7 +59,7 @@ class ContactsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -66,8 +70,8 @@ class ContactsController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -78,7 +82,7 @@ class ContactsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
