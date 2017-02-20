@@ -13,8 +13,11 @@ php artisan key:generate
 ```
 root\public\app
 ```
-- выполните команду для RESTful api
+- выполните команду для запуска
 ```
 php artisan serve
 ```
 
+запустите по `http://localhost:8000/` 
+
+Наслаждайтесь !

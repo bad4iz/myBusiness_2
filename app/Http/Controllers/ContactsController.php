@@ -54,6 +54,8 @@ class ContactsController extends Controller
     public function show($id)
     {
         //
+        $contacts = [['name' => 'Петя', 'age' => '23', 'occupation' => 'Директор']];
+        echo json_encode($contacts);
     }
 
     /**
