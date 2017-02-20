@@ -36,9 +36,9 @@ define(function(require) {
          console.info('показ третьей страницы');
        },
        remove: function() {
-         this.menuModule.remove();
-         this.contentsModule.remove();
-         this.container.remove();
+//          this.menuModule.remove();
+//          this.contentsModule.remove();
+//          this.container.remove();
          console.info('удаление модулей третьей страницы');
   
        }
